@@ -4,10 +4,10 @@ test:
 	go test ./...
 
 run:
-	go run ./cmd/bitclock-go
+	go run .
 
 build:
-	go build -o $(BIN) ./cmd/bitclock-go
+	go build -o $(BIN) .
 
 clean:
 	if [ -f $(BIN) ]; then rm $(BIN); fi
