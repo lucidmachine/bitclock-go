@@ -1,4 +1,4 @@
-package main
+package backend
 
 import (
 	"fmt"
@@ -49,10 +49,4 @@ func (bt BitTime) String() string {
 		bt[2][3],
 		bt[3][3],
 	)
-}
-
-func main() {
-	now := time.Now()
-	bitTime := NewBitTime(now)
-	fmt.Println(bitTime)
 }
