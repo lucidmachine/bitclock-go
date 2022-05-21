@@ -4,9 +4,10 @@ A [BitClock](https://github.com/lucidmachine/bitclock) TUI frontend and backend 
 
 ## Installation
 
-### Build From Source
+### From Source
 
 ```
 $ git clone https://github.com/lucidmachine/bitclock-go.git
-$ go install
+$ make
+$ make install
 ```
