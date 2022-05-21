@@ -23,20 +23,22 @@ func TestNewBitDigit(t *testing.T) {
 }
 
 func TestNewBitTime(t *testing.T) {
-	bitTime := NewBitTime(time.Date(2022, 5, 21, 12, 34, 00, 00, time.Local))
-	if bitTime != [4]BitDigit{
+	bitTime := NewBitTime(time.Date(2022, 5, 21, 12, 34, 56, 00, time.Local))
+	if bitTime != [6]BitDigit{
 		[4]int{0, 0, 0, 1},
 		[4]int{0, 0, 1, 0},
 		[4]int{0, 0, 1, 1},
-		[4]int{0, 1, 0, 0}} {
-		t.Errorf("Expected: [[0, 0, 0, 1], [0, 0, 1, 0], [0, 0, 1, 1], [0, 1, 0, 0]]\nActual: %v", bitTime)
+		[4]int{0, 1, 0, 0},
+		[4]int{0, 1, 0, 1},
+		[4]int{0, 1, 1, 0}} {
+		t.Errorf("Expected: [[0, 0, 0, 1], [0, 0, 1, 0], [0, 0, 1, 1], [0, 1, 0, 0], [0, 1, 0, 1], [0, 1, 1, 0]]\nActual: %v", bitTime)
 	}
 }
 
 func TestBitTimeString(t *testing.T) {
-	bitTime := NewBitTime(time.Date(2022, 05, 21, 12, 34, 00, 00, time.Local))
+	bitTime := NewBitTime(time.Date(2022, 05, 21, 12, 34, 56, 00, time.Local))
 	bitTimeStr := bitTime.String()
-	if bitTimeStr != "0000\n0001\n0110\n1010" {
-		t.Errorf("Expected: 0000\\n0001\\n0110\\n1010\nActual: %s", bitTimeStr)
+	if bitTimeStr != "000000\n000111\n011001\n101010" {
+		t.Errorf("Expected:\n000000\n000111\n011001\n101010\nActual:\n%s", bitTimeStr)
 	}
 }
