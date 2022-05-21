@@ -1,6 +1,6 @@
 # bitclock-go
 
-A [BitClock](https://github.com/lucidmachine/bitclock) CLI frontend and backend written in Go.
+A [BitClock](https://github.com/lucidmachine/bitclock) TUI frontend and backend written in Go and [tcell](https://github.com/gdamore/tcell).
 
 ## Installation
 
